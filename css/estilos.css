@@ -55,11 +55,11 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 3vw;
   line-height: 1.2;
-  font-size: 60px;
+  font-size: 100px;
   text-align: center;
 }
 h2{
-  font-family: 'Algerian', sans-serif;
+  font-family: 'Aharomi', sans-serif;
 }
 section{
   background: rgba(5, 5, 5, 0.7);
@@ -68,12 +68,78 @@ section{
   padding: 1rem;
   text-align: center;
 }
-img{
-  border-radius: 10px;
+.info img{
+  width: 25%;
+  display: inline-flex;
 }
 section div p{
   font-family: 'Arial', sans-serif;
   width: 60%;
+  display: flex;
   margin-left: 20%;
-  font-size: 20px;
+  font-size: 15px;
+}
+.cover-content img{
+  width: 25%;
+}
+footer{
+  background: white;
+  position: relative;
+}
+footer h2{
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+img{
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+img:hover{
+  transform: scale(0.9);
+}
+.img{
+  transition: all 0.3s ease-in-out;
+}
+.img:hover{
+  cursor: pointer;
+}
+.he a{
+  transition: all 0.3s ease-in-out;
+}
+.he a:hover{
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(5, 5, 5, 0.7);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }

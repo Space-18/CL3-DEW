@@ -18,7 +18,7 @@
      mi = f.getMinutes();
      ho = f.getHours();
 
-     imprimir = (dd + "/" + mm + "/" + yy + "  " + ho + ":" + mi);
+     imprimir = (dd + "/" + mm + "/" + yy + "-" + ho + ":" + mi);
 
      document.form_reloj.reloj.value =imprimir;
      setTimeout("reloj()",1000);}
@@ -31,14 +31,14 @@
       <nav>
         <div class="he">
           <h2>Le Pizze</h2>
-          <a href="#menos" onclick="lmenos()">Inicio</a>
-          <a href="#">Pizzas</a>
-          <a href="#">Contactanos</a>
-          <a href="#">Sobre nosotros</a>
+          <a href="javascript:location.reload()" onclick="lmenos()">Inicio</a>
+          <a href="javascript:location.reload()">Pizzas</a>
+          <a href="javascript:location.reload()">Contactanos</a>
+          <a href="javascript:location.reload()">Sobre nosotros</a>
           <br>
         </div>
         <form name="form_reloj">
-          <input type="text" name="reloj" size="10">
+          <input type="text" name="reloj" size="12">
         </form>
       </nav>
     </header>
@@ -46,11 +46,15 @@
       <h1>
         Le Pizze
       </h1>
+      <img src="../util/logoP.png" width="10%">
     </div>
     <section>
       <h2>Información</h2>
       <br>
-      <div>
+      <div class="info">
+        <img src="../util/Cpizza.jpg" alt="">
+        <br>
+        <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -58,22 +62,25 @@
           velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum. <br> <br> <p id="text"></p><br>
-        </p><a href="#menos"><img class="img" src="../util/menos.png" width="15%" onclick="lmenos()"></a>
-        <a href="#mas"><img class="img" src="../util/mas.png" width="15%" onclick="lmas()"></a>
+        </p>
       </div>
+        <a href="#menos"><img class="img" src="../util/menos.png" width="15%" onclick="lmenos()"></a>
+        <a href="#mas"><img class="img" src="../util/mas.png" width="15%" onclick="lmas()"></a>
 
-      <div class="cover">
-
+        <br><br><br><br>
         <div class="cover-content" style="position: relative;">
-          <h1>Make sure I'm above the background!</h1>
+          <h2>Nuestras Pizzas</h2>
+          <br>
+          <img src="../util/dos.jpg" alt="">
+          <img src="../util/uno.jpg" alt="">
+          <img src="https://mahatmarice.com/wp-content/uploads/2020/04/Rice-Pizza-Crust.jpg" alt="">
+          <br>
+          <br>
+          <img src="../util/tres.jpg" alt="">
+          <img src="https://placeralplato.com/files/2019/02/Pizza-de-pepperoni-640x480.jpg?width=1200&enable=upscale" alt="">
         </div>
-
-        <!-- I get injected by crossfade.js -->
-    <canvas></canvas>
-
-  </div>
     </section>
-    <footer></footer>
+    <footer><h2>Todos los derechos reservados © --- All Land --- 12/2020 --- Lima-Perú</h2></footer>
   </div>
   </body>
   <script>
@@ -91,5 +98,12 @@
   $(window).load(function() {
     $('.flexslider').flexslider();
   });
+</script>
+<script type="text/javascript">
+$(function () {
+
+$('.crossfade').crossfade(options);
+
+});
 </script>
 </html>
