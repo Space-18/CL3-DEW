@@ -8,6 +8,8 @@
     <script src="../js/jquery.flexslider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/flexslider.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jQuery.BlackAndWhite.js"></script>
     <script>
     function reloj(){
      f = new Date();
@@ -71,7 +73,7 @@
         <div class="cover-content" style="position: relative;">
           <h2>Nuestras Pizzas</h2>
           <br>
-          <img src="../util/dos.jpg" alt="">
+            <img src="../util/dos.jpg" alt="">
           <img src="../util/uno.jpg" alt="">
           <img src="https://mahatmarice.com/wp-content/uploads/2020/04/Rice-Pizza-Crust.jpg" alt="">
           <br>
@@ -104,6 +106,19 @@ $(function () {
 
 $('.crossfade').crossfade(options);
 
+});
+</script>
+<script type="text/javascript">
+$(window).load(function(){
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true,
+        webworkerPath : false,
+        intensity:1,
+        speed: {
+            fadeIn: 200,
+            fadeOut: 800
+        }
+    });
 });
 </script>
 </html>
