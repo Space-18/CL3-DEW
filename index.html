@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Le Pizze...</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shorcut icon" href="../util/logoP.png">
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/flexslider.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jQuery.BlackAndWhite.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer="defer"></script>
+    <script>
+    function reloj(){
+     f = new Date();
+
+     dd = f.getDate();
+     mm = f.getMonth() +1;
+     yy = f.getFullYear();
+     mi = f.getMinutes();
+     ho = f.getHours();
+
+     imprimir = (dd + "/" + mm + "/" + yy + "-" + ho + ":" + mi);
+
+     document.form_reloj.reloj.value =imprimir;
+     setTimeout("reloj()",1000);}
+    </script>
+  </head>
+  <body  onload="reloj()">
+    <video src="util/banner.mp4" autoplay loop playsinline muted></video>
+    <div id="contenedor1">
+    <header>
+      <nav>
+        <div class="he">
+          <h2>Le Pizze</h2>
+          <a href="javascript:location.reload()" onclick="lmenos()">Inicio</a>
+          <a href="javascript:location.reload()">Pizzas</a>
+          <a href="javascript:location.reload()">Contactanos</a>
+          <a href="javascript:location.reload()">Sobre nosotros</a>
+          <br>
+        </div>
+        <form name="form_reloj">
+          <input type="text" name="reloj" size="12">
+        </form>
+      </nav>
+    </header>
+    <div class="viewport-header">
+      <h1>
+        Le Pizze
+      </h1>
+      <img src="util/logoP.png" width="10%">
+    </div>
+    <section>
+      <h2>Información</h2>
+      <br>
+      <div class="info">
+        <img src="util/Cpizza.jpg" alt="">
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum. <br> <br> <p id="text"></p><br>
+        </p>
+      </div>
+        <a href="#menos"><img class="img" src="util/menos.png" width="15%" onclick="lmenos()"></a>
+        <a href="#mas"><img class="img" src="util/mas.png" width="15%" onclick="lmas()"></a>
+
+        <br><br><br><br>
+        <div class="cover-content" style="position: relative;">
+          <h2>Nuestras Pizzas</h2>
+          <br>
+          <div class="image-container">
+
+            <img class="image-zoom" src="../util/dos.jpg" alt="">
+          </div>
+          <img src="util/uno.jpg" alt="">
+          <img src="https://mahatmarice.com/wp-content/uploads/2020/04/Rice-Pizza-Crust.jpg" alt="">
+          <br>
+          <br>
+          <img src="util/tres.jpg" alt="">
+          <img src="https://placeralplato.com/files/2019/02/Pizza-de-pepperoni-640x480.jpg?width=1200&enable=upscale" alt="">
+        </div>
+    </section>
+    <footer><h2>Todos los derechos reservados © --- All Land --- 12/2020 --- Lima-Perú</h2></footer>
+  </div>
+  </body>
+  <script>
+
+	var text = document.getElementById("text");
+
+	function lmas(){
+		text.innerHTML = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?";
+  }
+  function lmenos(){
+    text.innerHTML = "";
+  }
+</script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
+<script type="text/javascript">
+$(function () {
+
+$('.crossfade').crossfade(options);
+
+});
+</script>
+<script type="text/javascript">
+$(window).load(function(){
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true,
+        webworkerPath : false,
+        intensity:1,
+        speed: {
+            fadeIn: 200,
+            fadeOut: 800
+        }
+    });
+});
+</script>
+</html>
